@@ -54,6 +54,6 @@
  <h4>Samsur Sekh</h4>
     <ul><li>Github:Samsursekh</li>
       <li>Github Link:https://github.com/Samsursekh</li>
-      <li>Email:samsur.sekh.masai@gmail.com</li>
+      <li>Email:   samsur.sekh.masai@gmail.com </li>
       <li>LinkedIn:https://www.linkedin.com/in/samsur-sekh-b6961a22b/</li></ul>
   </html>

@@ -7,7 +7,7 @@ import Sort from "./Sort";
 
 
 const getData = ({page}) => {
-   return fetch(`http://localhost:8080/mobile-tablets?_limit=20&_page=${page}`).then(
+   return fetch(`https://jiomart-data.onrender.com/mobile-tablets?_limit=20&_page=${page}`).then(
         r => {
             return r.json();
       
@@ -102,10 +102,10 @@ const handleLowToHigh =() => {
                         posts.map((item) => (
                             <div className={styles.child__divs} 
                             key={item.id}>
-                                <div>
+                                {/* <div>
                                     <img className={styles.sam__dis__img} src={item.discountimgLink} alt=""/>
                                     <div className={styles.over_the_image}><p>{item.discount}</p></div>
-                                </div>  
+                                </div>   */}
                             <img className={styles.sam__cart__img} src={item.imgLink1} /> <br /> {item.name}<br />  ₹{item.price}.00  (₹ 499.00/0 )</div>
                         ))
                     }

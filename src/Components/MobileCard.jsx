@@ -1,4 +1,3 @@
-// ***** this is for the groceries card component
 import { position } from '@chakra-ui/react';
 import React from 'react'
 import { Link } from 'react-router-dom';
@@ -11,13 +10,13 @@ const MobileCard = ({ item ,productData }) => {
       <Link to={`/mobileProducts/${productData.id}`}>
       <div className='img-box'>
         <div> 
-          <img style={{height:"37px", 
+          {/* <img style={{height:"37px", 
            width:"37px", 
            display:"flex",
            marginLeft:"-30px", 
            marginTop:"5px", 
            position:"absolute" 
-        }} src={item.discountimgLink} alt="img" />
+        }} src={item.discountimgLink} alt="img" /> */}
 
        <p style={{height:"35px", 
        width:"35px", 

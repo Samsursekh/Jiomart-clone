@@ -16,7 +16,7 @@ export const ProductDetailPage = () => {
     if (section === "groceriesproducts" && id) {
       const groceries = data.GroceriesReducer.groceries;
       const productById = groceries.find(
-        (groceries) => groceries.id === Number(id)
+        (groceries) => groceries?.id === Number(id)
       );
       productById && setCurrentProduct(productById);
     } else if (section === "womensproducts" && id) {
@@ -37,6 +37,7 @@ export const ProductDetailPage = () => {
 
   const handleAddToCart = () => {
     const temp = currentProduct;
+    console.log(temp, "Temp is there or not")
     dispatch(addCartData(temp));
     alert("Product added Successfully");
   };
@@ -73,18 +74,7 @@ export const ProductDetailPage = () => {
             </p>
           </div>
           <div className="payment-logo">
-            <img
-              src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/food-icon/sodexo.svg"
-              alt="img1"
-            />
-            <img
-              src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/food-icon/edenred.svg"
-              alt="img1"
-            />
-            <img
-              src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/food-icon/paytm_food_wallet.svg"
-              alt="img1"
-            />
+           
             <p> T&C Apply </p>
           </div>
           <button id="btn" onClick={handleAddToCart}>

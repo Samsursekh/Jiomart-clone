@@ -4,7 +4,7 @@ import axios from "axios";
 export const getCartData = () => (dispatch) => {
   dispatch({ type: types.GET_CARTDATA_REQUEST });
   return axios
-    .get("http://localhost:8080/Cart")
+    .get("https://jiomart-data.onrender.com/Cart")
     .then((res) => {
       console.log("GetRes:", res);
       return dispatch({ type: types.GET_CARTDATA_SUCCESS, payload: res.data });
@@ -17,7 +17,7 @@ export const getCartData = () => (dispatch) => {
 export const addCartData = (payload) => (dispatch) => {
   dispatch({ type: types.ADD_CARTDATA_REQUEST });
   return axios
-    .post(`http://localhost:8080/Cart`, payload)
+    .post(`https://jiomart-data.onrender.com/Cart`, payload)
     .then((res) => {
       console.log("AddRes:", res);
       return dispatch({ type: types.ADD_CARTDATA_SUCCESS, payload: res.data });
@@ -32,13 +32,13 @@ export const updateCartData = (id, payload) => (dispatch) => {
   dispatch({ type: types.UPDATE_CARTDATA_REQUEST });
   return axios
     .patch(
-      `http://localhost:8080/Cart/${id}`,
+      `https://jiomart-data.onrender.com/Cart/${id}`,
       payload
     )
     .then((res) => {
       console.log("UpdateRes:", res);
       axios
-        .get("http://localhost:8080/Cart")
+        .get("https://jiomart-data.onrender.com/Cart")
         .then((res) => {
           console.log("InnerRes:", res);
           return dispatch({
@@ -57,13 +57,13 @@ export const deleteCartData = (payload) => (dispatch) => {
   dispatch({ type: types.DELETE_CARTDATA_REQUEST });
   return axios
     .delete(
-      `http://localhost:8080/Cart/${payload.id}`,
+      `https://jiomart-data.onrender.com/Cart/${payload.id}`,
       payload
     )
     .then((res) => {
       console.log("deleteRes:", res);
       axios
-        .get("http://localhost:8080/Cart")
+        .get("https://jiomart-data.onrender.com/Cart")
         .then((res) => {
           return dispatch({
             type: types.DELETE_CARTDATA_SUCCESS,

@@ -7,7 +7,7 @@ export const fetchKitchenData =
     dispatch({ type: types.GET_KITCHENWAREDATA_REQUEST });
     return axios
       .get(
-        `http://localhost:8080/kitchenwares?_sort=${sort}&_order=${order}&_page=${page}&_limit=16`,
+        `https://jiomart-data.onrender.com/kitchenwares?_sort=${sort}&_order=${order}&_page=${page}&_limit=16`,
         params
       )
       .then((res) => {

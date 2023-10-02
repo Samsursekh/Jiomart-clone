@@ -136,7 +136,7 @@ console.log(suggestion)
        
         <div>
           <Link to={"/"}>
-            <img width="110px" src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg" />
+            <img width="110px" src="https://www.jiomart.com/assets/ds2web/images/jiomart_beta_logo.svg" />
             </Link>
         </div>
 
